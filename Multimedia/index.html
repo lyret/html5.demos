@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+	<head>
+		<title>Uppgift 3 - Media och lokal lagring.</title>
+		<script type="text/javascript" src="script.js"></script>
+		<link rel="stylesheet" media="screen" href="style.css" />
+        <link rel="stylesheet" media="print, handheld" href="style_print.css" />
+		<meta charset="utf-8" />
+	</head>
+<body onload="init()">
+
+	<article>
+		<header>
+			<h1>Uppgift 3 - Media och lokal lagring.</h1>
+			<p>Av Viktor Lyresten för Umeå Universitet 10-08-2012.</p>
+			<p>Ljudklippet är  <em>'Independence Day'</em> av DoKashiteru. Det är licenserat under Creative Commons BY NC, och det är nerladdat från <a href='http://ccmixter.org/'>http://ccmixter.org/</a>. Videoklippen är från <a href='http://www.lucidmovement.com'>http://www.lucidmovement.com</a>, och kan användas för icke komerciellt bruk och så länge de inte används på sidor med liknande format och användning. </p>
+			<button onclick="play_all()">SPELA ALL MEDIA</button>
+			<button onclick="stop_all()">STOPPA ALL MEDIA</button>
+		</header>
+
+		<section>
+			<h2>Video</h2>
+			<button onclick="change_video('balloons', 'WaterBalloon1')">Visa första filmen</button>
+			<button onclick="change_video('balloons', 'WaterBalloon2')">Visa andra filmen</button>
+			<br>
+			<video id="balloons" controls class="media">
+				Något gick fel, videon kan inte visas.
+			</video>
+			<p class="licence"><a href='http://www.lucidmovement.com'>http://www.lucidmovement.com</a>
+			<br>These files are Royalty free, free to be used in all forms of media including
+			<br>but not limited to games, TV and film. They cannot bet resold in a stock
+			<br>video collection, or used on a website of similar format as this one.
+			<br>The clips also cannot be included in any collection without prior written consent. 
+			</p>
+		</section>
+		<section>
+			<h2>Ljud</h2>
+			<audio id="independence" autoplay controls class="media">
+				<source type="audio/ogg" src="http://www8.cs.umu.se/kursmaterial/html5/mediafiler/DoKashiteru_-_Independence_Day.ogg" />
+				<source type="audio/mpeg" src="http://www8.cs.umu.se/kursmaterial/html5/mediafiler/DoKashiteru_-_Independence_Day.mp3" />
+				Något gick fel, ljudet kan inte spelas.
+			</audio>
+			<p class="licence">'Independence Day' by 'DoKashiteru'
+			 <br>Licenced under Creative Commons: NC BY
+			 <br>Downloaded from <a href='http://ccmixter.org/'>http://ccmixter.org/</a>
+			</p>
+		</section>
+		<section>
+			<h2>Rityta (2d grafik på canvas)</h2>
+			<p id="storage_status" class="message"></p>
+			<input id="canvas_color" type="text" value="#4479BA" />
+			<input id="canvas_size" type="text" value="15" />
+			<button onclick="canvas_clear()">Rensa canvas</button>
+			<br>
+			<canvas id="canvas" width="400" height="400">
+				Något gick fel, ritytan kan inte användas.
+			</canvas>
+			<p id="canvas_status" class="message"></p>
+		</section>
+	</article>
+
+	<footer>
+		<p></p>
+	</footer>
+
+</body>
+</html>
